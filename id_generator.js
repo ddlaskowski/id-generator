@@ -1,4 +1,3 @@
-//
 exports.createId = (idType, date, extraStringLength, extraStringType) => {
   		//define default options for id
   		var idOptions = [false, null, 8, 'fullAlphabetNumbers'];
@@ -94,11 +93,11 @@ var idGeneratorUtility = {
 	  	if (idType)
 	  	{
 	  		for (let [key, value] of Object.entries(prefix)) {
-	        if(key === idType)
-	        {
-	      		//add prefix if id type belong to {prefix} 
-	          mixedString += value; 
-	        }
+          if(key === idType)
+          {
+            //add prefix if id type belong to {prefix} 
+            mixedString += value; 
+          }
 	  		}
 	  	}
 	  	//when during id creating are date do part of id based on date time values
@@ -107,7 +106,7 @@ var idGeneratorUtility = {
 	      for (let [key, value] of Object.entries(dateObject)) {
 	        if(key === 'year')
 	        {
-	      		//take only last two digit from year value
+	      	  //take only last two digit from year value
 	          let tempValue = String(value);
 	          mixedString += tempValue.slice(2);  
 	        }
